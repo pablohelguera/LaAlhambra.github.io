@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.fuente-cursiva {
+    font-family: 'Great Vibes', cursive;
+}
+
+.navbar-logo-size {
+    font-size: 40px;
+}
+
+
+/*---------------------------------------
+       MEDIA QUERIES              
+  -----------------------------------------*/
+
+
+/* Tablet y Celular */
+
+@media (max-width: 991.98px) {
+    .ancho-btn {
+        width: 30%;
+    }
+    .centrar-items-hamburguesa {
+        text-align: center;
+    }
+}
+
+
+/* Solo Celular */
+
+@media (max-width: 767.98px) {
+    .altura-slider-sm {
+        height: 260px;
+    }
+}
+
+
+/* Computadora */
+
+@media (min-width: 992px) {
+    .navbar-m-custom {
+        margin-left: 120px;
+    }
+    .carousel,
+    .carousel-inner,
+    .item,
+    img {
+        height: 630px;
+    }
+}
+
+
+/*---------------------------------------
+       ÍCONO WHATSAPP              
+  -----------------------------------------*/
+
+.btnWhatsApp {
+    position: fixed;
+    z-index: 1000;
+    bottom: 40px;
+    right: -950px;
+    transition: all 1s 0s linear;
+}
+
+.btnWhatsAppOcultar {
+    position: fixed;
+    z-index: 1000;
+    bottom: 40px;
+    right: -1950px;
+    transition: all 1s 0s linear;
+}
+
+.iconoWhatsApp {
+    width: 8%;
+    height: 8%;
+}
+
+@media (max-width: 767.98px) {
+    .tamanio-sm {
+        width: 6%;
+        height: 6%;
+    }
+    .btnWhatsApp-sm {
+        position: fixed;
+        z-index: 1000;
+        bottom: 25px;
+        right: -1050px;
+    }
+}
+
+.magnifyText {
+    color: hsl(222, 25%, 14%);
+    transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.magnifyText:hover {
+    transform: scale(1.05);
+    color: hsl(243, 80%, 62%);
+}
+
+.magnifyText:active {
+    transform: scale(.9);
+}
+
+
+/*---------------------------------------
+       PRE LOADER              
+  -----------------------------------------*/
+
+#contenedorPreloader {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    transition: all 1s ease;
+    z-index: 10000;
+}
+
+#preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 350px;
+    height: 350px;
+}
+
+
+/*---------------------------------------
+       NAVBAR              
+  -----------------------------------------*/
+
+.fuentes-personalizadas {
+    background: rgba(19, 15, 15, 0.055) !important;
+    color: white;
+}
+
+.fuentes-personalizadas li {
+    font-weight: bold;
+}
+
+.fuentes-personalizadas a {
+    color: white;
+}
+
+.fuentes-personalizadas a:hover {
+    color: red
+}
+
+.fuentes-personalizadas-scroll {
+    background: white !important;
+    color: black;
+}
+
+.fuentes-personalizadas-scroll li {
+    font-weight: bold;
+}
+
+.fuentes-personalizadas-scroll a {
+    color: black;
+}
+
+.fuentes-personalizadas-scroll a:hover {
+    color: red;
+}
+
+.mayusculas {
+    text-transform: uppercase;
+}
+
+
+/* Efecto botones navbar */
+
+.overlayLeftBtn {
+    background-color: red;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlayLeftBtn span {
+    color: white;
+    position: relative;
+    z-index: 1;
+    transition: color 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+}
+
+.overlayLeftBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 6px;
+    transform: translate(-101%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: transform 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+}
+
+.overlayLeftBtn:hover span {
+    color: red;
+}
+
+.overlayLeftBtn:hover::before {
+    transform: translate(0, -50%);
+}
+
+.swingHorizontal {
+    color: black;
+}
+
+.swingHorizontal:hover {
+    animation: swingHorizontal 1s ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes swingHorizontal {
+    15% {
+        transform: translateX(5px);
+    }
+    30% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(3px);
+    }
+    65% {
+        transform: translateX(-3px);
+    }
+    80% {
+        transform: translateX(2px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/*---------------------------------------
+       CAROUSEL              
+  -----------------------------------------*/
+
+.btnSlider {
+    background: red;
+    border-radius: 11px;
+    padding: 15px 40px;
+    color: white;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btnSlider:hover {
+    background: rgb(185, 2, 2);
+    color: white;
+}
+
+.positionText1y2 {
+    position: absolute;
+    top: 180px;
+    left: -350px;
+}
+
+.positionText3 {
+    position: absolute;
+    top: 130px;
+    left: 120px;
+}
+
+@media (max-width: 991.98px) {
+    .positionText1-IPad {
+        position: absolute;
+        top: 85px;
+        left: 45px;
+        font-size: 10%;
+        text-align: left;
+    }
+    .positionText3-IPad {
+        position: absolute;
+        top: 80px;
+        left: 120px;
+        font-size: 10%;
+    }
+}
+
+
+/*---------------------------------------
+        SOBRE NOSOTROS              
+  -----------------------------------------*/
+
+
+/*---------------------------------------
+        NUESTROS CHEFS
+  -----------------------------------------*/
+
+.fondo {
+    background-color: whitesmoke;
+}
+
+.imgRound {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px gray;
+}
+
+
+/*---------------------------------------
+    Media Querryes
+  -----------------------------------------*/
+
+@media all and (max-width:767px) {
+    #mapa {
+        margin-bottom: 30px;
+    }
+}
+
+@media all and (max-width:576px) {
+    .parrillero {
+        margin-bottom: 50px;
+    }
+}
+
+
+/*---------------------------------------
+    Mapa
+  -----------------------------------------*/
+
+iframe {
+    height: 100%;
+}
+
+
+/*---------------------------------------
+    Carta
+  -----------------------------------------*/
+
+
+/*Efecto 1*/
+
+.hover-zoomin div {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10%;
+    box-shadow: 0 0 10px grey;
+}
+
+.hover-zoomin img {
+    width: 100%;
+    height: auto;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.hover-zoomin:hover img {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
+/*Efecto 2*/
+
+.hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    border-radius: 10%;
+    box-shadow: 0 0 10px grey;
+}
+
+.hovereffect .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.hovereffect img {
+    display: block;
+    position: relative;
+    -webkit-transition: all .4s linear;
+    transition: all .4s linear;
+}
+
+.hovereffect h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-transform: translatey(-100px);
+    -ms-transform: translatey(-100px);
+    transform: translatey(-100px);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    padding: 10px;
+}
+
+.hovereffect h3.info {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: transparent;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    margin: 50px 0 0;
+    padding: 50px 14px;
+}
+
+.hovereffect:hover img {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.hovereffect:hover .overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.hovereffect:hover h2,
+.hovereffect:hover h3.info {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-transform: translatey(0);
+    -webkit-transform: translatey(0);
+    transform: translatey(0);
+}
+
+.hovereffect:hover h3.info {
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s;
+}
+
+
+/*---------------------------------------
+    Formulario Contacto
+  -----------------------------------------*/
+
+#fromContacto .form-control {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #dddddd;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.btnForm {
+    background: red;
+    border-radius: 11px;
+    padding: 15px 40px;
+    color: white;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btnForm:hover {
+    background: rgb(185, 2, 2);
+    color: white;
+}
+
+@media (max-width: 767.98px) {
+    .form-margin-sm {
+        margin-bottom: 10px;
+    }
+}
+
+
+/*---------------------------------------
+    Footer
+  -----------------------------------------*/
+
+.bg-horarios {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.751), rgba(0, 0, 0, 0.751)), url(../img/footer-open-hour-bg.jpg);
+    background-size: cover;
+    border-radius: 10%;
+    object-fit: fill;
+    box-shadow: 0 0 20px gray;
+}
+
+.bg-horariosbis {
+    border-radius: 10%;
+}
+
+.colorGris {
+    color: #909090;
+    text-decoration: none;
+}
+
+@media (max-width: 767.98px) {
+    .margin-sm {
+        margin-top: 40px;
+    }
+}
